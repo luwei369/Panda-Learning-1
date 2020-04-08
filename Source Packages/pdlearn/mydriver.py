@@ -17,7 +17,7 @@ class Mydriver:
             elif os.path.exists("/opt/google/chrome/chrome"):  # linux
                 self.options.binary_location = "/opt/google/chrome/chrome"
             if noimg:
-                self.options.add_argument('blink-settings=imagesEnabled=false')  # 不加载图片, 提升速度
+                self.options.add_argument('blink-settings=imagesEnabled=true')  # 不加载图片, 提升速度，但无法显示二维码
             if nohead:
                 self.options.add_argument('--headless')
                 self.options.add_argument('--disable-extensions')
